@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS music_albums (
 CREATE TABLE IF NOT EXISTS singers_ablums_id (
 	id SERIAL PRIMARY KEY,
 	music_album_id INTEGER NOT NULL REFERENCES music_albums(music_album_id),
-	singer_id INTEGER NOT REFERENCES singers(singer_id)
+	singer_id INTEGER NOT NULL REFERENCES singers(singer_id)
 );
 
 CREATE TABLE IF NOT EXISTS musical_tracks (
